@@ -1,9 +1,9 @@
 #include "src/HCSR04/HCSR04.h"
 #include "src/logger/Logger.h"
+#include "src/Elevator/Elevator.h"
 
 bool debug = true;
 
-float distance[3];
 
 HCSR04 sensor(A5, A4);
 Logger logger(debug);
