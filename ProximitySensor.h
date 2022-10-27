@@ -1,13 +1,16 @@
 #ifndef ProximitySensor_h
 #define ProximitySensor_h
 
+#include <HCSR04.h>
 #include <Arduino.h>
 
 class ProximitySensor {
   private: 
-    int sensorPin;
+    int echoPin;
+    int triggerPin;
   public:
-    ProximitySensor(int); 
+    ProximitySensor(int Echo, int Trigger);
+    int getDistance(); 
 };
 
 #endif

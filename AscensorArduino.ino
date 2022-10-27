@@ -1,12 +1,19 @@
-#include "ProximitySensor.h"
+#include <HCSR04.h>
+#include "Logger.h"
+
+bool debug = true;
+
+float distance[3];
+
+HCSR04 sensor(A5, A4);
+Logger logger(debug);
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
-  Serial.println("Conexion inizializada");
-
+  logger.info("Conexion inizializada");
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+    logger.debug("Distancia: "+ (String) sensor.dist());
+    delay(1000);   
 }
