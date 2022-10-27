@@ -1,5 +1,5 @@
-#include <HCSR04.h>
-#include "Logger.h"
+#include "src/HCSR04/HCSR04.h"
+#include "src/logger/Logger.h"
 
 bool debug = true;
 
